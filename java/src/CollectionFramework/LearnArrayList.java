@@ -44,7 +44,7 @@ public class LearnArrayList {
 
         // contains
         System.out.println(list.contains(2));
-        
+
 
     }
 }
