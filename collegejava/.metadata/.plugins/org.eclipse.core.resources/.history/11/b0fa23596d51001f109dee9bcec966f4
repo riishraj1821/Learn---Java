@@ -1,0 +1,35 @@
+package Mupackege;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// Driver load
+		//connection establish
+		try {
+			String url = "jdbc:mysql://localhost:3306";
+			String userName = "root";
+			String password = "Mishi@2003";
+			
+			Connection conn = DriverManager.getConnection(url,userName,password);
+			
+			//Statement create
+			Statement stm = conn.createStatement();
+			
+			String query = "create database BD"; 
+			stm.execute(query);
+			System.out.println("connected Successfully");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		//execute query
+		//connection close
+
+	}
+
+}

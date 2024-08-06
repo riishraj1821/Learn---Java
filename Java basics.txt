@@ -1,0 +1,107 @@
+Java basics
+servlet and JSP
+JDBC, Hibernate
+Spring core, MVC
+Spring BOot: Rest Apis
+
+
+command for compile = javac filename
+command for execute = java classname
+
+Scanner sc = new Scanner(System.in)
+int x;
+x= sc.nextInt();
+
+0
+
+x= sc.next().charAt(0);
+
+
+
+data type explicit type conversion
+
+int age = 150;
+byte newAge = (byte)age;
+*******************************
+
+Assignment operator
+
++=  a+=b  a = a+b;
+-=  a-=b  a = a-b;
+*=  a*=b  a = a*b;
+/=  a/=b  a = a/b;
+%=  a%=b  a = a%b;
+
+logical operator
+
+
+Relationship between object
+
+Use-A
+Has-A
+Is-A
+
+
+****************************
+
+JAVA Ternary Operators
+
+condition ? expression1:expression2;
+int a = 12;
+int b = 13;
+
+max= a>b? a:b;
+
+***************************************
+
+Switch
+
+public class LearnSwitch {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the day");
+        int day = sc.nextInt();
+
+        switch (day){
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            case 4:
+                System.out.println("Thursday");
+                break;
+            case 5:
+                System.out.println("Friday");
+                break;
+            case 6:
+                System.out.println("Saturday");
+                break;
+                case 7:
+                System.out.println("Sunday");
+                break;
+        }
+
+************************************************************
+
+Interface: Purely Abstract Function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+package services;
+
+
+
+import org.hibernate.Session;
+
+import entities.Employee;
+
+public class EmpService {
+	
+	public void save(Employee ob)
+	{
+		Session sess = null;
+		try {
+			Session sess = SessFactoryBuilder.getSess();
+			sess.save(ob);
+			sess.beginTransaction().commit();
+			System.out.println("\nEmployee Details Saved");
+		} catch (Exception ex) {
+			System.out.println(ex.getMessage());
+		}finally {
+			sess.close();
+		}
+	}
+	
+}

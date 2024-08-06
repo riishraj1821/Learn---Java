@@ -1,0 +1,15 @@
+package mainpk;
+
+import entities.Employee;
+import services.SessFactoryBuilder;
+
+
+public class Pro1 {
+ public static void main(String[] args) {
+	SessFactoryBuilder.buildFactory();
+	
+   SessFactoryBuilder.closeFactory();
+	
+	
+}
+}

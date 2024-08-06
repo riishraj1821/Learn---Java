@@ -1,0 +1,24 @@
+package mainpk;
+
+import entities.Employee;
+import services.EmpService;
+import services.SessFactoryBuilder;
+
+
+public class Pro1 {
+ public static void main(String[] args) {
+	 
+	 EmpService ser = new EmpService();
+	 SessFactoryBuilder.buildFactory();
+	 
+	 Employee e1 = new Employee(103, "rajesh", 22, "rajesh@gmail.com", 0);
+	 SessFactoryBuilder.buildFactory();
+	 ser.save(e1);
+	 
+	 System.out.println(ser.getByID(1));
+	
+   SessFactoryBuilder.closeFactory();
+	
+}
+ 
+}

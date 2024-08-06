@@ -1,0 +1,29 @@
+package pk1;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import entities.Department;
+import entities.Employee;
+
+public class Pro2 {
+	
+public static void main(String[] args) {
+	Configuration cfg = new Configuration().configure();
+	SessionFactory sf = cfg.buildSessionFactory();
+	
+	Session sess =  sf.openSession();
+	
+	Department d1 = sess.get(Department.class, 3);
+	Department d2 = sess.get(Department.class, 2);
+	
+	Employee e1= new Employee("vikas","vikas@gmail.com",2500f, d1);
+	Employee e2= new Employee("ryes","rjes@gmail.com",200f, d2);	
+	sess.save(e1);
+	sess.save(e2);
+	sess.beginTransaction().commit();
+	
+	sf.close();
+}
+}

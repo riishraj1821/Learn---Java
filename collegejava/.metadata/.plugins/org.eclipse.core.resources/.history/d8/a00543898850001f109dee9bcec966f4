@@ -1,0 +1,21 @@
+package pk1;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import entities.Department;
+import entities.Employee;
+
+public class Pro2 {
+	
+public static void main(String[] args) {
+	Configuration cfg = new Configuration().configure();
+	SessionFactory sf = cfg.buildSessionFactory();
+	
+	Employee e1= new Employee("vikas","vikas@gmail.com",2500f,null);
+
+	
+	sf.close();
+}
+}
